@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Flavors Factory | थे फ्लेवर्स फैक्ट्री — Connaught Place, New Delhi</title>
+  <meta name="description" content="Discover exquisite South Indian & North Indian flavours at The Flavors Factory, Connaught Place, New Delhi. Renowned for crispy dosas, fusion specialities, platters, and filter coffee.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandIvory: '#FAF7F2',
+            brandCream: '#F3ECE1',
+            brandDark: '#1A1615',
+            brandCharcoal: '#241E1C',
+            brandOrange: '#D95D24',
+            brandOrangeHover: '#BF4D1A',
+            brandGold: '#E59E27',
+            brandSaffron: '#F4A261',
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow': '0 10px 30px -10px rgba(217, 93, 36, 0.3)',
+            'card': '0 15px 35px rgba(26, 22, 21, 0.05)',
+            'glass': '0 8px 32px 0 rgba(26, 22, 21, 0.12)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D95D24;
+      border-radius: 4px;
+    }
+    
+    .glass-nav {
+      background: rgba(26, 22, 21, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(26, 22, 21, 0.35) 0%, rgba(26, 22, 21, 0.85) 75%, rgba(26, 22, 21, 1) 100%);
+    }
+    
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+    }
+    .animate-float {
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+
+    .btn-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.25) 50%,
+        transparent 70%
+      );
+      transform: rotate(30deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+    .btn-shimmer:hover::after {
+      opacity: 1;
+      left: 100%;
+    }
+  </style>
+</head>
+<body class="bg-brandIvory text-brandDark font-sans selection:bg-brandOrange selection:text-white">
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav border-b border-white/10 text-white" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brandOrange to-brandGold flex items-center justify-center text-white text-base font-bold shadow-glow group-hover:scale-105 transition-transform">
+          FF
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-2xl font-bold tracking-wide text-brandIvory leading-none group-hover:text-brandGold transition-colors">THE FLAVORS FACTORY</span>
+          <span class="text-[10px] tracking-widest text-brandGold uppercase font-medium">थे फ्लेवर्स फैक्ट्री • Connaught Place</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="#about" class="hover:text-brandGold transition-colors">About Us</a>
+        <a href="#menu" class="hover:text-brandGold transition-colors">Menu</a>
+        <a href="#signature" class="hover:text-brandGold transition-colors">Bestsellers</a>
+        <a href="#gallery" class="hover:text-brandGold transition-colors">Gallery</a>
+        <a href="#reviews" class="hover:text-brandGold transition-colors">Reviews</a>
+        <a href="#location" class="hover:text-brandGold transition-colors">Visit Us</a>
+      </nav>
+
+      <!-- Desktop Header Actions -->
+      <div class="hidden lg:flex items-center gap-4">
+        <!-- Direct Call -->
+        <a href="tel:01143215555" class="px-4 py-2.5 rounded-full border border-white/20 hover:bg-white/10 text-white text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-2">
+          <i class="fa-solid fa-phone text-brandGold"></i> 011-4321-5555
+        </a>
+
+        <!-- WhatsApp Order Button -->
+        <a id="nav-wa-btn" href="https://wa.me/?text=Hello%20The%20Flavors%20Factory%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" 
+           class="px-4 py-2.5 rounded-full border border-green-500/40 bg-green-950/40 text-green-400 hover:bg-green-600 hover:text-white text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Order
+        </a>
+
+        <!-- Table Reservation Trigger -->
+        <button onclick="openModal('reservation-modal')" class="px-5 py-2.5 rounded-full bg-brandOrange hover:bg-brandOrangeHover text-white text-xs font-bold uppercase tracking-wider transition-all shadow-glow btn-shimmer flex items-center gap-2">
+          <i class="fa-regular fa-calendar-check"></i> Reserve Table
+        </button>
+
+        <!-- Cart Trigger Icon -->
+        <button onclick="toggleCartDrawer(true)" class="relative p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors" title="View Order Cart">
+          <i class="fa-solid fa-utensils text-lg"></i>
+          <span id="cart-badge-count" class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-brandGold text-brandDark text-[11px] font-bold flex items-center justify-center opacity-0 transition-opacity">0</span>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button onclick="toggleCartDrawer(true)" class="p-2 text-brandGold relative">
+          <i class="fa-solid fa-shopping-bag text-xl"></i>
+          <span id="cart-badge-mobile" class="absolute top-0 right-0 w-4 h-4 rounded-full bg-brandOrange text-white text-[9px] font-bold flex items-center justify-center opacity-0">0</span>
+        </button>
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 text-white text-2xl focus:outline-none" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brandDark/98 border-b border-white/10 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4 text-center font-medium">
+        <a href="#about" onclick="toggleMobileMenu()" class="py-2 hover:text-brandGold border-b border-white/5">About Us</a>
+        <a href="#menu" onclick="toggleMobileMenu()" class="py-2 hover:text-brandGold border-b border-white/5">Interactive Menu</a>
+        <a href="#signature" onclick="toggleMobileMenu()" class="py-2 hover:text-brandGold border-b border-white/5">Signature Dishes</a>
+        <a href="#gallery" onclick="toggleMobileMenu()" class="py-2 hover:text-brandGold border-b border-white/5">Ambience & Gallery</a>
+        <a href="#reviews" onclick="toggleMobileMenu()" class="py-2 hover:text-brandGold border-b border-white/5">Guest Reviews</a>
+        <a href="#location" onclick="toggleMobileMenu()" class="py-2 hover:text-brandGold border-b border-white/5">Location & Map</a>
+        <div class="pt-2 flex flex-col gap-3">
+          <button onclick="toggleMobileMenu(); openModal('reservation-modal');" class="w-full py-3 rounded-xl bg-brandOrange text-white font-bold uppercase tracking-wider text-xs">
+            Reserve a Table
+          </button>
+          <a href="https://wa.me/?text=Hello%20The%20Flavors%20Factory%2C%20I'd%20like%20to%20place%20an%20order!" target="_blank" class="w-full py-3 rounded-xl bg-green-600 text-white font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Order via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-screen flex items-center justify-center bg-brandDark text-white pt-20 overflow-hidden">
+    <!-- Background Photography Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=2000&q=85" alt="Golden Crispy Masala Dosa" class="w-full h-full object-cover object-center opacity-45 scale-105 transform hover:scale-100 transition-transform duration-10000">
+      <div class="absolute inset-0 hero-gradient"></div>
+    </div>
+
+    <!-- Hero Content Container -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-12 pb-24">
+      
+      <!-- Top Badges -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+          <div class="flex items-center text-amber-400 gap-1 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <span class="font-bold text-white">4.4</span>
+          </div>
+          <span class="w-1 h-1 rounded-full bg-white/40"></span>
+          <span class="text-xs text-brandCream tracking-wide font-medium">2,722+ Google Reviews</span>
+        </div>
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brandOrange/30 backdrop-blur-md border border-brandOrange/40 text-brandGold text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-location-dot"></i> Connaught Place, New Delhi
+        </div>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-brandIvory mb-6 leading-tight">
+        A World of Flavours.<br>
+        <span class="italic font-normal text-brandGold">One Unforgettable Experience.</span>
+      </h1>
+
+      <!-- Supporting Subheadline -->
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-brandCream/90 font-light leading-relaxed mb-10">
+        Discover the perfect blend of South Indian favourites, North Indian delights, and irresistible fusion flavours in the heart of Connaught Place.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
+        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brandOrange hover:bg-brandOrangeHover text-white font-bold text-sm uppercase tracking-widest transition-all shadow-glow btn-shimmer flex items-center justify-center gap-3">
+          <span>Explore Our Menu</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button onclick="toggleCartDrawer(true)" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-sm uppercase tracking-widest backdrop-blur-md transition-all flex items-center justify-center gap-3">
+          <i class="fa-solid fa-bag-shopping text-brandGold"></i>
+          <span>Order Online</span>
+        </button>
+        <a href="#location" class="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent hover:bg-white/10 border border-white/20 text-white font-bold text-sm uppercase tracking-widest transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-map-pin text-brandOrange"></i>
+          <span>Find Us</span>
+        </a>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="mt-16 flex flex-col items-center gap-2 opacity-75 hover:opacity-100 transition-opacity">
+        <span class="text-[11px] uppercase tracking-widest text-brandCream font-medium">Scroll To Explore</span>
+        <a href="#highlights" class="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
+          <div class="w-1.5 h-3 rounded-full bg-brandGold animate-bounce"></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK STATS & LIVE STATUS BAR -->
+  <section id="highlights" class="bg-brandCharcoal text-brandCream py-6 border-y border-white/10 relative z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <!-- Live Open Status -->
+        <div class="flex flex-col items-center justify-center">
+          <div class="flex items-center gap-2 mb-1">
+            <span id="live-status-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span id="live-status-text" class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Open Now</span>
+          </div>
+          <span class="text-xs text-white/70">Daily 10:00 AM – 11:00 PM</span>
+        </div>
+
+        <!-- Rating & Reputation -->
+        <div class="flex flex-col items-center justify-center">
+          <div class="flex items-center gap-1.5 text-brandGold font-bold text-sm mb-1">
+            <i class="fa-solid fa-star"></i>
+            <span>4.4 / 5.0 Rating</span>
+          </div>
+          <span class="text-xs text-white/70">2,722 Verified Diners</span>
+        </div>
+
+        <!-- Pricing Tier -->
+        <div class="flex flex-col items-center justify-center">
+          <div class="text-sm font-bold text-brandIvory mb-1">
+            ₹200 – ₹1,000 <span class="text-xs font-normal text-white/70">/ person</span>
+          </div>
+          <span class="text-xs text-white/70">Affordable Luxury & Value</span>
+        </div>
+
+        <!-- Service Modes -->
+        <div class="flex flex-col items-center justify-center">
+          <div class="flex items-center gap-2 text-xs font-semibold text-brandGold mb-1">
+            <i class="fa-solid fa-utensils" title="Dine-in"></i>
+            <i class="fa-solid fa-car" title="Kerbside Pickup"></i>
+            <i class="fa-solid fa-motorcycle" title="No-contact Delivery"></i>
+          </div>
+          <span class="text-xs text-white/70">Dine-in • Pickup • Delivery</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT THE RESTAURANT SECTION -->
+  <section id="about" class="py-24 bg-brandIvory text-brandDark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Image Composition -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="The Flavors Factory Dining Atmosphere" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+          </div>
+          
+          <div class="absolute -bottom-8 -right-4 sm:-right-8 z-20 w-48 sm:w-64 rounded-xl overflow-hidden shadow-2xl border-4 border-brandCream hidden sm:block animate-float">
+            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" alt="Crispy Masala Dosa Platter" class="w-full h-44 object-cover">
+          </div>
+
+          <div class="absolute -top-6 -left-6 z-20 w-28 h-28 rounded-full bg-brandOrange text-white flex flex-col items-center justify-center p-2 text-center shadow-lg font-serif">
+            <span class="text-2xl font-bold leading-none">CP's</span>
+            <span class="text-[10px] uppercase tracking-widest font-sans mt-1">Iconic Spot</span>
+          </div>
+        </div>
+
+        <!-- Content Editorial Column -->
+        <div class="lg:col-span-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brandOrange/10 text-brandOrange text-xs font-bold uppercase tracking-widest mb-4">
+            <i class="fa-solid fa-utensils"></i> Authentic Culinary Heritage
+          </div>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-brandDark mb-6 leading-tight">
+            Made for Food Lovers.<br>
+            <span class="italic text-brandOrange font-normal">Crafted for Memorable Moments.</span>
+          </h2>
+          <p class="text-base text-gray-700 leading-relaxed mb-6 font-normal">
+            Located conveniently at the T-Point of KG Marg in Connaught Place (at the landmark Old Amber Restaurant building), <strong>The Flavors Factory (थे फ्लेवर्स फैक्ट्री)</strong> brings together authentic South Indian recipes, golden crispy dosas, slow-brewed brass filter coffee, and hearty North Indian favourites under one roof.
+          </p>
+          
+          <!-- Key Highlights Grid -->
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="p-4 rounded-xl bg-white border border-brandCream shadow-card">
+              <div class="text-brandOrange font-bold text-sm mb-1"><i class="fa-solid fa-stroopwafel mr-2"></i>Dosa Mastery</div>
+              <p class="text-xs text-gray-600">From classic golden Mysuru dosas to modern melted cheese garlic fusion dosas.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-brandCream shadow-card">
+              <div class="text-brandGold font-bold text-sm mb-1"><i class="fa-solid fa-heart mr-2"></i>Generous Portions</div>
+              <p class="text-xs text-gray-600">Fresh slow-simmered sambar, tri-color chutneys, and rich curries.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-brandCream shadow-card">
+              <div class="text-brandOrange font-bold text-sm mb-1"><i class="fa-solid fa-users mr-2"></i>Warm Ambience</div>
+              <p class="text-xs text-gray-600">Peaceful family environment, quick courteous service, and air-conditioned dining.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-brandCream shadow-card">
+              <div class="text-brandGold font-bold text-sm mb-1"><i class="fa-solid fa-tag mr-2"></i>Reasonable Pricing</div>
+              <p class="text-xs text-gray-600">Premium food quality in Connaught Place at reasonable pricing (₹200–₹1,000/person).</p>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex items-center gap-4">
+            <a href="#menu" class="px-6 py-3 rounded-full bg-brandDark hover:bg-black text-white text-xs font-bold uppercase tracking-widest transition-all shadow-md">
+              Browse Menu
+            </a>
+            <a href="tel:01143215555" class="px-6 py-3 rounded-full border border-brandDark/30 hover:bg-brandDark hover:text-white text-brandDark text-xs font-bold uppercase tracking-widest transition-all">
+              <i class="fa-solid fa-phone mr-1"></i> Call 011-4321-5555
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE DISHES & BESTSELLERS SHOWCASE -->
+  <section id="signature" class="py-24 bg-brandDark text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brandGold font-bold text-xs uppercase tracking-widest">Chef's Handpicked Specials</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-brandIvory mt-2 mb-4">
+          Signature Dishes & Bestsellers
+        </h2>
+        <p class="text-sm sm:text-base text-brandCream/80 font-light">
+          Prepared fresh daily using authentic spices, hand-ground chutneys, and classic cooking techniques.
+        </p>
+      </div>
+
+      <!-- Grid Showcase -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Dish 1 -->
+        <div class="bg-brandCharcoal rounded-2xl overflow-hidden border border-white/10 group hover:border-brandOrange transition-all duration-300 shadow-2xl flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80" alt="Crispy Mysore Masala Dosa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brandOrange text-white text-[10px] font-bold uppercase tracking-wider">Bestseller</span>
+            <span class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-green-950/80 text-green-400 border border-green-500/40 text-[10px] font-bold">VEG</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="font-serif text-2xl font-bold text-brandIvory group-hover:text-brandGold transition-colors">Crispy Mysore Masala Dosa</h3>
+                  <span class="text-[11px] text-brandGold font-medium">मैसूर मसाला डोसा</span>
+                </div>
+                <span class="text-brandGold font-bold text-xl">₹240</span>
+              </div>
+              <p class="text-xs text-white/70 leading-relaxed mb-4">
+                Golden crispy crepe smeared with authentic garlic-red chili mysore paste, filled with spiced potato mash, served with sambar & coconut chutneys.
+              </p>
+            </div>
+            <button onclick="addToCart('Crispy Mysore Masala Dosa', 240)" class="w-full py-2.5 rounded-xl border border-brandOrange text-brandOrange hover:bg-brandOrange hover:text-white text-xs font-bold uppercase tracking-wider transition-all">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="bg-brandCharcoal rounded-2xl overflow-hidden border border-white/10 group hover:border-brandOrange transition-all duration-300 shadow-2xl flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80" alt="Cheesy Fusion Pizza Dosa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brandGold text-brandDark text-[10px] font-bold uppercase tracking-wider">Fusion Favorite</span>
+            <span class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-green-950/80 text-green-400 border border-green-500/40 text-[10px] font-bold">VEG</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="font-serif text-2xl font-bold text-brandIvory group-hover:text-brandGold transition-colors">Cheesy Fusion Pizza Dosa</h3>
+                  <span class="text-[11px] text-brandGold font-medium">चीज़ी पिज्जा डोसा</span>
+                </div>
+                <span class="text-brandGold font-bold text-xl">₹290</span>
+              </div>
+              <p class="text-xs text-white/70 leading-relaxed mb-4">
+                Open-face crispy dosa base topped with melted mozzarella, bell peppers, sweet corn, Italian herbs, and garlic tomato reduction.
+              </p>
+            </div>
+            <button onclick="addToCart('Cheesy Fusion Pizza Dosa', 290)" class="w-full py-2.5 rounded-xl border border-brandOrange text-brandOrange hover:bg-brandOrange hover:text-white text-xs font-bold uppercase tracking-wider transition-all">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Dish 3 -->
+        <div class="bg-brandCharcoal rounded-2xl overflow-hidden border border-white/10 group hover:border-brandOrange transition-all duration-300 shadow-2xl flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80" alt="Authentic Kumbakonam Filter Coffee" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-amber-700 text-white text-[10px] font-bold uppercase tracking-wider">Traditional Brew</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="font-serif text-2xl font-bold text-brandIvory group-hover:text-brandGold transition-colors">Brass Filter Kaapi</h3>
+                  <span class="text-[11px] text-brandGold font-medium">फिल्टर कॉफी</span>
+                </div>
+                <span class="text-brandGold font-bold text-xl">₹90</span>
+              </div>
+              <p class="text-xs text-white/70 leading-relaxed mb-4">
+                Freshly decocted chicory-blended coffee served frothy in a traditional brass Dabarah & Tumbler. The ultimate meal finish!
+              </p>
+            </div>
+            <button onclick="addToCart('Brass Filter Kaapi', 90)" class="w-full py-2.5 rounded-xl border border-brandOrange text-brandOrange hover:bg-brandOrange hover:text-white text-xs font-bold uppercase tracking-wider transition-all">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE MENU SECTION WITH REAL-TIME SEARCH -->
+  <section id="menu" class="py-24 bg-brandCream text-brandDark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header & Search Bar -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-brandOrange font-bold text-xs uppercase tracking-widest">Fresh & Authentic</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brandDark mt-1">Interactive Menu</h2>
+        </div>
+        
+        <!-- Live Search Box -->
+        <div class="relative w-full md:w-80">
+          <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          <input type="text" id="menu-search-input" onkeyup="filterMenuItems()" placeholder="Search dosas, thalis, coffee..." 
+                 class="w-full pl-11 pr-4 py-3 rounded-full bg-white border border-gray-300 text-sm focus:outline-none focus:border-brandOrange transition-colors shadow-sm">
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar" id="category-tabs">
+        <button onclick="setMenuCategory('all', this)" class="tab-btn text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-brandDark text-white transition-all whitespace-nowrap shadow-sm">
+          All Dishes
+        </button>
+        <button onclick="setMenuCategory('signature-dosas', this)" class="tab-btn text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-white text-brandDark border border-gray-300 hover:border-brandOrange transition-all whitespace-nowrap shadow-sm">
+          Signature Dosas
+        </button>
+        <button onclick="setMenuCategory('fusion-dosas', this)" class="tab-btn text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-white text-brandDark border border-gray-300 hover:border-brandOrange transition-all whitespace-nowrap shadow-sm">
+          Fusion Dosas
+        </button>
+        <button onclick="setMenuCategory('south-specialties', this)" class="tab-btn text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-white text-brandDark border border-gray-300 hover:border-brandOrange transition-all whitespace-nowrap shadow-sm">
+          Idli & South Special
+        </button>
+        <button onclick="setMenuCategory('north-favorites', this)" class="tab-btn text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-white text-brandDark border border-gray-300 hover:border-brandOrange transition-all whitespace-nowrap shadow-sm">
+          North Indian Delights
+        </button>
+        <button onclick="setMenuCategory('platters-beverages', this)" class="tab-btn text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-white text-brandDark border border-gray-300 hover:border-brandOrange transition-all whitespace-nowrap shadow-sm">
+          Meals & Coffee
+        </button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="menu-items-grid">
+        <!-- Injected Dynamically by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY & AMBIENCE (FILTERABLE LIGHTBOX) -->
+  <section id="gallery" class="py-24 bg-brandDark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-brandGold font-bold text-xs uppercase tracking-widest">Visual Atmosphere</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brandIvory mt-2 mb-4">Gallery & Dining Ambience</h2>
+        <p class="text-sm text-brandCream/80 font-light">Take a peek at our restaurant interior and hand-crafted culinary presentations.</p>
+      </div>
+
+      <!-- Gallery Filters -->
+      <div class="flex justify-center gap-3 mb-10">
+        <button onclick="filterGallery('all', this)" class="gallery-filter-btn px-4 py-1.5 rounded-full bg-brandOrange text-white text-xs font-bold uppercase tracking-wider">All Photos</button>
+        <button onclick="filterGallery('food', this)" class="gallery-filter-btn px-4 py-1.5 rounded-full bg-white/10 text-white hover:bg-white/20 text-xs font-bold uppercase tracking-wider">Food & Dishes</button>
+        <button onclick="filterGallery('ambience', this)" class="gallery-filter-btn px-4 py-1.5 rounded-full bg-white/10 text-white hover:bg-white/20 text-xs font-bold uppercase tracking-wider">Restaurant Ambience</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="gallery-grid">
+        <div class="gallery-item food rounded-xl overflow-hidden h-60 relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1200&q=85', 'Crispy Golden Masala Dosa')">
+          <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=80" alt="Crispy Masala Dosa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl text-white"></i>
+          </div>
+        </div>
+
+        <div class="gallery-item ambience rounded-xl overflow-hidden h-60 relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85', 'Warm Dining Interior Connaught Place')">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Dining Hall" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl text-white"></i>
+          </div>
+        </div>
+
+        <div class="gallery-item food rounded-xl overflow-hidden h-60 relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=1200&q=85', 'Authentic Filter Kaapi in Brass Dabarah')">
+          <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=600&q=80" alt="Filter Coffee" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl text-white"></i>
+          </div>
+        </div>
+
+        <div class="gallery-item food rounded-xl overflow-hidden h-60 relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=85', 'South Indian Special Platter')">
+          <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" alt="South Indian Feast" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl text-white"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REVIEWS & TRUST SHOWCASE -->
+  <section id="reviews" class="py-24 bg-brandIvory text-brandDark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-brandOrange font-bold text-xs uppercase tracking-widest">Verified Guest Experience</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brandDark mt-1">Loved by Connaught Place Diners</h2>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=The+Flavors+Factory+Connaught+Place+New+Delhi" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-gray-300 hover:border-brandOrange text-xs font-bold uppercase tracking-wider shadow-sm transition-all">
+          <i class="fa-brands fa-google text-red-500 text-sm"></i>
+          <span>View 2,722+ Reviews on Google</span>
+        </a>
+      </div>
+
+      <!-- Testimonial Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="p-8 rounded-2xl bg-white border border-brandCream shadow-card flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed italic mb-6">
+              "The crispy Mysore Masala Dosa here is easily among the best in Connaught Place. Piping hot sambar, fresh coconut chutneys, and incredible brass filter coffee!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-brandOrange/20 text-brandOrange font-bold flex items-center justify-center text-sm">
+              RS
+            </div>
+            <div>
+              <div class="font-bold text-sm text-brandDark">Rohit Sharma</div>
+              <div class="text-[11px] text-gray-400">Local Guide • Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-8 rounded-2xl bg-white border border-brandCream shadow-card flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed italic mb-6">
+              "Prime location at KG Marg T-Point. Generous portion sizes and reasonable prices considering the heart of CP. The Cheesy Fusion Dosa was loved by our kids!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-brandGold/20 text-brandGold font-bold flex items-center justify-center text-sm">
+              PM
+            </div>
+            <div>
+              <div class="font-bold text-sm text-brandDark">Pooja Mehra</div>
+              <div class="text-[11px] text-gray-400">Verified Customer • Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-8 rounded-2xl bg-white border border-brandCream shadow-card flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed italic mb-6">
+              "Polite staff, clean air-conditioned seating, and fast service even during busy weekend lunch hours. Excellent North Indian thalis too!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-sm">
+              VK
+            </div>
+            <div>
+              <div class="font-bold text-sm text-brandDark">Vikram Kapoor</div>
+              <div class="text-[11px] text-gray-400">Regular Diner • Google Review</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION, CONTACT & GOOGLE MAPS SECTION -->
+  <section id="location" class="py-24 bg-brandCharcoal text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Info & Actions Column -->
+        <div class="lg:col-span-6">
+          <span class="text-brandGold font-bold text-xs uppercase tracking-widest">Connaught Place, New Delhi</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brandIvory mt-2 mb-6">Visit Us & Contact</h2>
+          
+          <div class="space-y-6 text-sm text-brandCream/90 mb-8">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brandGold shrink-0 mt-1">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-base">Address</h4>
+                <p class="leading-relaxed mt-0.5">
+                  T Point of KG Marg, Old Amber Restaurant, N-19, Connaught Circle, Connaught Place, New Delhi, Delhi 110001
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brandGold shrink-0 mt-1">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-base">Direct Phone</h4>
+                <p class="mt-0.5">
+                  <a href="tel:01143215555" class="hover:text-brandGold underline transition-colors">011-4321-5555</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brandGold shrink-0 mt-1">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-base">Opening Hours</h4>
+                <p class="mt-0.5">Monday – Sunday: 10:00 AM – 11:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="https://www.google.com/maps/search/?api=1&query=The+Flavors+Factory+Connaught+Place+New+Delhi" target="_blank" rel="noopener noreferrer"
+               class="px-6 py-3.5 rounded-full bg-brandOrange hover:bg-brandOrangeHover text-white font-bold text-xs uppercase tracking-widest transition-all shadow-glow flex items-center gap-2">
+              <i class="fa-solid fa-diamond-turn-right text-sm"></i> Get Directions
+            </a>
+            <a href="tel:01143215555" class="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs uppercase tracking-widest transition-all flex items-center gap-2">
+              <i class="fa-solid fa-phone"></i> Call Restaurant
+            </a>
+          </div>
+        </div>
+
+        <!-- Embedded Interactive Google Map Container -->
+        <div class="lg:col-span-6 h-[400px] rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl relative">
+          <iframe 
+            title="The Flavors Factory Location Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.988086082982!2d77.2188!3d28.6299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd58a1e50529%3A0x9dc1cdcc30b0a96c!2sConnaught%20Place%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            class="w-full h-full border-0" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brandDark text-brandCream py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div>
+        <div class="font-serif text-2xl font-bold text-brandIvory">THE FLAVORS FACTORY</div>
+        <p class="text-xs text-white/60 mt-1">T Point of KG Marg, Old Amber Restaurant, N-19, Connaught Place, New Delhi 110001</p>
+      </div>
+
+      <div class="flex items-center gap-6 text-sm text-white/70">
+        <a href="#about" class="hover:text-brandGold transition-colors">About</a>
+        <a href="#menu" class="hover:text-brandGold transition-colors">Menu</a>
+        <a href="#signature" class="hover:text-brandGold transition-colors">Bestsellers</a>
+        <a href="#location" class="hover:text-brandGold transition-colors">Directions</a>
+        <a href="tel:01143215555" class="hover:text-brandGold transition-colors">Contact</a>
+      </div>
+
+      <div class="text-xs text-white/50">
+        © <span id="year">2026</span> The Flavors Factory. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE BOTTOM ACTION BAR -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-brandDark/98 border-t border-white/10 px-4 py-3 backdrop-blur-md flex items-center justify-around text-white">
+    <a href="tel:01143215555" class="flex flex-col items-center gap-1 text-[11px] font-medium text-white/90">
+      <i class="fa-solid fa-phone text-brandGold text-lg"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://www.google.com/maps/search/?api=1&query=The+Flavors+Factory+Connaught+Place+New+Delhi" target="_blank" class="flex flex-col items-center gap-1 text-[11px] font-medium text-white/90">
+      <i class="fa-solid fa-location-arrow text-brandGold text-lg"></i>
+      <span>Directions</span>
+    </a>
+    <a href="https://wa.me/?text=Hello%20The%20Flavors%20Factory%2C%20I'd%20like%20to%20order!" target="_blank" class="flex flex-col items-center gap-1 text-[11px] font-medium text-green-400">
+      <i class="fa-brands fa-whatsapp text-lg"></i>
+      <span>WhatsApp</span>
+    </a>
+    <button onclick="openModal('reservation-modal')" class="flex flex-col items-center gap-1 text-[11px] font-medium text-brandOrange">
+      <i class="fa-regular fa-calendar-check text-lg"></i>
+      <span>Reserve</span>
+    </button>
+  </div>
+
+  <!-- QUICK CART DRAWER MODAL -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden transition-all duration-300">
+    <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-brandIvory text-brandDark shadow-2xl flex flex-col justify-between">
+      
+      <!-- Drawer Header -->
+      <div class="p-6 bg-brandDark text-white flex items-center justify-between border-b border-white/10">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-bag-shopping text-brandGold text-xl"></i>
+          <h3 class="font-serif text-xl font-bold">Your Order Cart</h3>
+        </div>
+        <button onclick="toggleCartDrawer(false)" class="p-2 text-white/70 hover:text-white">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Cart Items List -->
+      <div class="p-6 overflow-y-auto flex-1 space-y-4" id="cart-items-container">
+        <div class="text-center py-12 text-gray-500" id="empty-cart-msg">
+          <i class="fa-solid fa-utensils text-4xl mb-3 text-gray-300"></i>
+          <p class="text-sm">Your cart is currently empty.</p>
+          <span class="text-xs text-gray-400">Add dishes from our menu to initiate an order!</span>
+        </div>
+      </div>
+
+      <!-- Cart Footer / Order Options -->
+      <div class="p-6 bg-white border-t border-brandCream flex flex-col gap-3">
+        <div class="flex justify-between items-center font-bold text-lg">
+          <span>Estimated Total:</span>
+          <span class="text-brandOrange" id="cart-total-price">₹0</span>
+        </div>
+        
+        <button onclick="sendWhatsAppOrder()" id="cart-wa-checkout-btn" disabled class="w-full py-3 rounded-xl bg-green-600 disabled:opacity-50 hover:bg-green-700 text-white font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 shadow-md transition-all">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Order via WhatsApp
+        </button>
+        
+        <a href="tel:01143215555" class="w-full py-3 rounded-xl bg-brandDark hover:bg-black text-white font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 transition-all">
+          <i class="fa-solid fa-phone"></i> Call to Place Order (011-4321-5555)
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TABLE RESERVATION MODAL -->
+  <div id="reservation-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-brandIvory text-brandDark max-w-lg w-full rounded-2xl overflow-hidden shadow-2xl border border-brandCream relative">
+      
+      <!-- Modal Header -->
+      <div class="bg-brandDark text-white p-6 flex items-center justify-between">
+        <div>
+          <h3 class="font-serif text-2xl font-bold">Reserve a Table</h3>
+          <p class="text-xs text-brandCream/70">The Flavors Factory • Connaught Place</p>
+        </div>
+        <button onclick="closeModal('reservation-modal')" class="p-2 text-white/70 hover:text-white">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Reservation Form -->
+      <form id="reservation-form" onsubmit="handleReservationSubmit(event)" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Full Name</label>
+          <input type="text" required placeholder="e.g. Ananya Roy" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-brandOrange">
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Phone Number</label>
+            <input type="tel" required placeholder="9876543210" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-brandOrange">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Guests</label>
+            <select required class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-brandOrange">
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="6">6+ Guests (Family)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Date</label>
+            <input type="date" required class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-brandOrange">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Time Slot</label>
+            <select required class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-brandOrange">
+              <option value="12:30 PM">12:30 PM (Lunch)</option>
+              <option value="2:00 PM">2:00 PM (Lunch)</option>
+              <option value="7:30 PM">7:30 PM (Dinner)</option>
+              <option value="9:00 PM">9:00 PM (Dinner)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Special Requests (Optional)</label>
+          <textarea rows="2" placeholder="Window table, high chair, birthday decoration, etc." class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-brandOrange"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-brandOrange hover:bg-brandOrangeHover text-white font-bold uppercase tracking-wider text-xs shadow-lg transition-all">
+          Confirm Reservation Request
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 hidden flex flex-col items-center justify-center p-4 cursor-pointer" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Enlarged view" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl object-contain">
+    <span id="lightbox-caption" class="text-white text-sm font-medium mt-3 bg-black/60 px-4 py-1.5 rounded-full"></span>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    const menuData = [
+      { id: 1, name: "Crispy Mysore Masala Dosa", hindi: "मैसूर मसाला डोसा", category: "signature-dosas", price: 240, desc: "Golden rice crepe smeared with hot red garlic-chili paste & potato masala.", img: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=80", tags: ["Bestseller", "Spicy"] },
+      { id: 2, name: "Signature Irani Dosa", hindi: "ईरानी डोसा", category: "signature-dosas", price: 260, desc: "Roasted crisp dosa with caramelised onion nut spread and spiced potato mix.", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80", tags: ["Chef Special"] },
+      { id: 3, name: "Cheesy Fusion Pizza Dosa", hindi: "चीज़ी पिज्जा डोसा", category: "fusion-dosas", price: 290, desc: "Open-face dosa loaded with mozzarella, sweet corn, bell peppers, and herbs.", img: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=80", tags: ["Fusion", "Kids Choice"] },
+      { id: 4, name: "Paneer Tikka Dosa", hindi: "पनीर टिक्का डोसा", category: "fusion-dosas", price: 310, desc: "Smoky tandoori paneer cubes stuffed in a paper-thin crispy dosa.", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80", tags: ["Fusion"] },
+      { id: 5, name: "Special South Indian Thali", hindi: "दक्षिण भारतीय थाली", category: "platters-beverages", price: 380, desc: "Complete feast with 2 mini dosas, sambar, rasam, kootu, chutneys & payasam.", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80", tags: ["Platter"] },
+      { id: 6, name: "Steaming Ghee Button Idli (4 Pcs)", hindi: "घी इडली", category: "south-specialties", price: 170, desc: "Feather-soft mini idlis topped with pure cow ghee and piping sambar.", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80", tags: ["Classic"] },
+      { id: 7, name: "Crispy Medu Vada (2 Pcs)", hindi: "मेदु वडा", category: "south-specialties", price: 160, desc: "Golden fried crispy lentil donuts served with fresh coconut chutney.", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80", tags: ["Crispy"] },
+      { id: 8, name: "Butter Chicken & Garlic Naan Combo", hindi: "बटर चिकन नूडल्स/नान", category: "north-favorites", price: 420, desc: "Tender chicken cooked in velvety tomato butter gravy served with garlic naan.", img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80", tags: ["North Special"] },
+      { id: 9, name: "Dal Makhani & Jeera Rice Thali", hindi: "दाल मखनी थाली", category: "north-favorites", price: 360, desc: "Slow-cooked black lentils in cream, fragrant jeera rice, naan & salad.", img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80", tags: ["North Special"] },
+      { id: 10, name: "Brass Filter Kaapi", hindi: "फिल्टर कॉफी", category: "platters-beverages", price: 90, desc: "Authentic chicory filter coffee poured frothy in traditional brass tumbler.", img: "https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=600&q=80", tags: ["Must Try"] }
+    ];
+
+    let cart = [];
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderMenu(menuData);
+      checkLiveOpeningStatus();
+    });
+
+    // Check Live Operating Hours (10:00 AM - 11:00 PM)
+    function checkLiveOperatingStatus() {
+      const now = new Date();
+      const hour = now.getHours();
+      const isOpen = hour >= 10 && hour < 23;
+      
+      const statusDot = document.getElementById('live-status-dot');
+      const statusText = document.getElementById('live-status-text');
+      
+      if (statusDot && statusText) {
+        if (isOpen) {
+          statusDot.className = "w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse";
+          statusText.innerText = "Open Now";
+          statusText.className = "text-xs font-semibold uppercase tracking-wider text-emerald-400";
+        } else {
+          statusDot.className = "w-2.5 h-2.5 rounded-full bg-amber-500";
+          statusText.innerText = "Opens at 10:00 AM";
+          statusText.className = "text-xs font-semibold uppercase tracking-wider text-amber-400";
+        }
+      }
+    }
+
+    // Render Menu Cards
+    function renderMenu(items) {
+      const container = document.getElementById('menu-items-grid');
+      if (items.length === 0) {
+        container.innerHTML = `<div class="col-span-full text-center py-12 text-gray-500">No matching dishes found.</div>`;
+        return;
+      }
+      container.innerHTML = items.map(item => `
+        <div class="bg-white rounded-2xl overflow-hidden border border-brandCream shadow-card hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 overflow-hidden">
+              <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 flex gap-1">
+                ${item.tags.map(tag => `<span class="px-2.5 py-0.5 rounded-full bg-brandDark/80 text-brandGold text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm">${tag}</span>`).join('')}
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-brandDark">${item.name}</h3>
+                  <span class="text-[11px] text-brandOrange font-medium">${item.hindi}</span>
+                </div>
+                <span class="text-brandOrange font-bold text-base">₹${item.price}</span>
+              </div>
+              <p class="text-xs text-gray-600 leading-relaxed mb-4">${item.desc}</p>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="addToCart('${item.name}', ${item.price})" class="w-full py-2.5 rounded-xl border border-brandOrange text-brandOrange hover:bg-brandOrange hover:text-white font-bold text-xs uppercase tracking-wider transition-all">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Filter Menu Category
+    function setMenuCategory(category, btnElem) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-brandDark', 'text-white');
+        btn.classList.add('bg-white', 'text-brandDark');
+      });
+      btnElem.classList.remove('bg-white', 'text-brandDark');
+      btnElem.classList.add('bg-brandDark', 'text-white');
+
+      if (category === 'all') {
+        renderMenu(menuData);
+      } else {
+        renderMenu(menuData.filter(item => item.category === category));
+      }
+    }
+
+    // Search Menu Filter
+    function filterMenuItems() {
+      const query = document.getElementById('menu-search-input').value.toLowerCase();
+      const filtered = menuData.filter(item => 
+        item.name.toLowerCase().includes(query) || 
+        item.hindi.toLowerCase().includes(query) || 
+        item.desc.toLowerCase().includes(query)
+      );
+      renderMenu(filtered);
+    }
+
+    // Cart System
+    function addToCart(name, price) {
+      const existing = cart.find(i => i.name === name);
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      updateCartUI();
+      toggleCartDrawer(true);
+    }
+
+    function updateCartQty(index, change) {
+      cart[index].qty += change;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const container = document.getElementById('cart-items-container');
+      const countBadges = [document.getElementById('cart-badge-count'), document.getElementById('cart-badge-mobile')];
+      const totalPriceEl = document.getElementById('cart-total-price');
+      const checkoutBtn = document.getElementById('cart-wa-checkout-btn');
+
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      countBadges.forEach(b => {
+        if (b) {
+          b.innerText = totalItems;
+          b.style.opacity = totalItems > 0 ? '1' : '0';
+        }
+      });
+
+      totalPriceEl.innerText = `₹${totalPrice}`;
+      if (checkoutBtn) checkoutBtn.disabled = cart.length === 0;
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 text-gray-500">
+            <i class="fa-solid fa-utensils text-4xl mb-3 text-gray-300"></i>
+            <p class="text-sm">Your cart is currently empty.</p>
+          </div>`;
+        return;
+      }
+
+      container.innerHTML = cart.map((item, idx) => `
+        <div class="flex items-center justify-between p-3 rounded-xl bg-white border border-gray-200 shadow-sm">
+          <div>
+            <h4 class="font-bold text-sm text-brandDark">${item.name}</h4>
+            <span class="text-xs text-brandOrange font-semibold">₹${item.price} x ${item.qty}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="updateCartQty(${idx}, -1)" class="w-7 h-7 rounded-lg bg-gray-100 font-bold text-brandDark hover:bg-gray-200">-</button>
+            <span class="text-xs font-bold w-4 text-center">${item.qty}</span>
+            <button onclick="updateCartQty(${idx}, 1)" class="w-7 h-7 rounded-lg bg-gray-100 font-bold text-brandDark hover:bg-gray-200">+</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function toggleCartDrawer(openState) {
+      const drawer = document.getElementById('cart-drawer');
+      if (openState === true) {
+        drawer.classList.remove('hidden');
+      } else if (openState === false) {
+        drawer.classList.add('hidden');
+      } else {
+        drawer.classList.toggle('hidden');
+      }
+    }
+
+    function sendWhatsAppOrder() {
+      if (cart.length === 0) return;
+      let text = "Hello The Flavors Factory! I would like to place an order:%0A%0A";
+      cart.forEach(item => {
+        text += `• ${item.name} x${item.qty} = ₹${item.price * item.qty}%0A`;
+      });
+      const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+      text += `%0ATotal Estimated: ₹${total}%0APlease confirm availability & pickup/delivery options.`;
+
+      const url = `https://wa.me/?text=${text}`;
+      window.open(url, '_blank');
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    function handleReservationSubmit(e) {
+      e.preventDefault();
+      alert("Thank you! Your reservation request for The Flavors Factory has been logged. Our team will contact you directly to confirm seating.");
+      closeModal('reservation-modal');
+    }
+
+    function filterGallery(category, btnElem) {
+      document.querySelectorAll('.gallery-filter-btn').forEach(b => {
+        b.classList.remove('bg-brandOrange');
+        b.classList.add('bg-white/10');
+      });
+      btnElem.classList.remove('bg-white/10');
+      btnElem.classList.add('bg-brandOrange');
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    function openLightbox(src, caption) {
+      const lightbox = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      img.src = src;
+      cap.innerText = caption || 'The Flavors Factory';
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox-modal');
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
